@@ -30,7 +30,7 @@ const BottomMenu = () => {
     checkAdminStatus();
   }, []);
 
-  const navigateToScreen = (screenName) => {
+  const navigateToScreen = (screenName: string) => {
     navigation.dispatch(
       CommonActions.reset({
         index: 0,

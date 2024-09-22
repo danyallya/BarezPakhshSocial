@@ -20,7 +20,7 @@ const LoginScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState({ visible: false, type: "", message: "" });
 
-  const handleLogin = async (username, password) => {
+  const handleLogin = async (username: string, password: string) => {
     if (!username || !password) {
       setAlert({
         visible: true,

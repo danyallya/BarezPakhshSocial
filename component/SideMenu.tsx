@@ -11,10 +11,15 @@ import {
   Image,
 } from "react-native";
 
+const { width, height } = Dimensions.get("window");
 
-const { width, height } = Dimensions.get('window');
+interface Props {
+  isVisible: boolean;
+  profileImage: any;
+  onClose: any;
+}
 
-const SideMenu = ({ isVisible, onClose, profileImage }) => {
+const SideMenu = ({ isVisible, onClose, profileImage }: Props) => {
   const [slideAnim] = useState(new Animated.Value(width));
 
   React.useEffect(() => {

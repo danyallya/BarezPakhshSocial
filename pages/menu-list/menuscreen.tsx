@@ -10,15 +10,24 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import styles from "./menustyle";
-// import BottomMenu from "../../component/menu";
 
 const MenuScreen = () => {
   const navigation = useNavigation();
 
   const menuItems = [
     { title: "بارکد اجناس", route: "", icon: "barcode-scan", type: "blue" },
-    { title: "لیست اجناس اسکن شده", route: "", icon: "check-circle", type: "default" },
-    { title: "لیست اجناس مشتریان", route: "List", icon: "account-group", type: "red" },
+    {
+      title: "لیست اجناس اسکن شده",
+      route: "",
+      icon: "check-circle",
+      type: "default",
+    },
+    {
+      title: "لیست اجناس مشتریان",
+      route: "List",
+      icon: "account-group",
+      type: "red",
+    },
     { title: "آیتم 4", route: "", icon: "archive", type: "default" },
     { title: "آیتم 5", route: "", icon: "box", type: "default" },
     { title: "آیتم 6", route: "", icon: "cart", type: "default" },
@@ -46,14 +55,14 @@ const MenuScreen = () => {
                   item.type === "red" && styles.tileRed,
                   item.type === "blue" && styles.tileBlue,
                 ]}
-                onPress={() => navigation.navigate(item.route)}
+                onPress={() => navigation.navigate(item.route as never)}
                 activeOpacity={0.7}
               >
                 <View style={styles.iconContainer}>
                   <MaterialCommunityIcons
-                    name={item.icon}
-                    size={30}
+                    name={item.icon as any}
                     color={item.type === "default" ? "#333" : "#fff"}
+                    size={30}
                   />
                 </View>
                 <Text
@@ -69,11 +78,9 @@ const MenuScreen = () => {
             ))}
           </View>
         </View>
-
       </View>
     </Modal>
   );
 };
 
 export default MenuScreen;
-

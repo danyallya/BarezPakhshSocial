@@ -1,7 +1,7 @@
-import axios from "axios";
 import * as SecureStore from "expo-secure-store";
+import axios, { AxiosResponse } from "axios";
 
-const getBaseUrl = async (service) => {
+const getBaseUrl = async (service: string): Promise<string> => {
   try {
     const credentials = await SecureStore.getItemAsync(service);
     if (credentials) {
@@ -13,7 +13,7 @@ const getBaseUrl = async (service) => {
   }
 };
 
-export const fetchUser = async (username, password) => {
+export const fetchUser = async (username: string, password: string) => {
   const baseUrl = await getBaseUrl("baseUrl2");
 
   try {
@@ -31,17 +31,17 @@ export const fetchUser = async (username, password) => {
     throw error;
   }
 };
+
 export const fetchData = async () => {
   try {
     const baseUrl = await getBaseUrl("baseUrl1");
     const response = await axios.get(
       `${baseUrl}/Stock/Packaging/listpackageapi`
     );
-    
+
     return response.data;
   } catch (error) {
     console.log(error);
     throw error;
   }
 };
-

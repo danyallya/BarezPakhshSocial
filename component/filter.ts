@@ -1,4 +1,4 @@
-export const filterData = (data, searchText) => {
+export const filterData = (data: Array<any>, searchText: string) => {
   return data.filter((item) =>
     Object.values(item).some(
       (value) =>
@@ -9,7 +9,7 @@ export const filterData = (data, searchText) => {
   );
 };
 
-export const filterstorage = (data, searchText) => {
+export const filterstorage = (data: Array<any>, searchText: string) => {
   const convertPersianToArabic = (text) => {
     return text.replace(/ی/g, "ي").replace(/ک/g, "ك");
   };

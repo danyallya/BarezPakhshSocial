@@ -5,7 +5,8 @@ import {
   Button,
   Alert,
   ScrollView,
-  Modal,Text
+  Modal,
+  Text,
 } from "react-native";
 import * as SecureStore from "expo-secure-store";
 import BottomMenu from "../../component/menu";
@@ -14,7 +15,6 @@ const SettingsScreen = () => {
   const [baseUrl1, setBaseUrl1] = useState("");
   const [baseUrl2, setBaseUrl2] = useState("");
   const [baseUrl3, setBaseUrl3] = useState("");
-
 
   useEffect(() => {
     const loadBaseUrls = async () => {
@@ -26,7 +26,6 @@ const SettingsScreen = () => {
         if (credentials1) setBaseUrl1(credentials1);
         if (credentials2) setBaseUrl2(credentials2);
         if (credentials3) setBaseUrl3(credentials3);
-  
       } catch (error) {
         console.error("خطا در فراخوانی آدرس ها", error);
       }
@@ -46,8 +45,6 @@ const SettingsScreen = () => {
       Alert.alert("خطا", "متاسفانه آدرس ها ذخیره نشد");
     }
   };
-
-
 
   return (
     <Modal>
@@ -100,9 +97,8 @@ const SettingsScreen = () => {
           />
           <Button title="ذخیره " onPress={handleSave} />
         </View>
-     
       </ScrollView>
-      <BottomMenu componentId={1} />
+      <BottomMenu />
     </Modal>
   );
 };

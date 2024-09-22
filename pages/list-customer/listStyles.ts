@@ -22,11 +22,11 @@ const listStyles = StyleSheet.create({
     top: 20,
     right: -25,
     zIndex: 1000,
-    alignItems: "end",
+    alignItems: "flex-end",
     justifyContent: "center",
     color: "#eee",
   },
-  main:{
+  main: {
     flex: 1,
     backgroundColor: "#F8F8F8",
     textAlign: "right",
@@ -36,7 +36,7 @@ const listStyles = StyleSheet.create({
     flexDirection: "row-reverse",
     padding: 10,
     justifyContent: "space-around",
-  }
+  },
 });
 
 export default listStyles;
