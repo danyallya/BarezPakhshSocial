@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "67257830338",
-    "project_id": "barazpakhsh",
-    "storage_bucket": "barazpakhsh.appspot.com"
+    "project_number": "543801164997",
+    "project_id": "barezpakhsh-6831b",
+    "storage_bucket": "barezpakhsh-6831b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:67257830338:android:5e4494408f755bde43245b",
+        "mobilesdk_app_id": "1:543801164997:android:67e8f0e851525547541cac",
         "android_client_info": {
           "package_name": "com.pos8887.BarezSocial"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBrWP18S5LpJA2fEQccvHLg-cj3KlJEI9Q"
+          "current_key": "AIzaSyCDwclk2VErHdIhzb04NDe54NCgujv6YK0"
         }
       ],
       "services": {

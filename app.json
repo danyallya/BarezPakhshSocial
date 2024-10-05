@@ -23,6 +23,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6bf55db5-c4d8-4924-abe8-5c29d74631c5"
+      }
+    },
+    "owner": "barez55"
   }
 }
